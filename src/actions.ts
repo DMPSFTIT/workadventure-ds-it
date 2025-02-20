@@ -28,10 +28,7 @@ function registerAreaOnLeaveHandler() {
     WA.room.area.onLeave('pauseArea').subscribe(() => {
         clearLastPositions();
     });
-    WA.room.area.onLeave('ccArea1').subscribe(() => {
-        clearLastPositions();
-    });
-    WA.room.area.onLeave('ccArea2').subscribe(() => {
+    WA.room.area.onLeave('InAMeetingArea').subscribe(() => {
         clearLastPositions();
     });
 }
@@ -59,9 +56,6 @@ function getRandomInt(min: number, max: number): number {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-function getDistance(x1: number, y1: number, x2: number, y2: number) {
-    return Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
-}
 
 async function teleportPlayerToArea(area: Area | undefined, positionType: PositionType) {
     let x = positions[positionType].x;
@@ -107,30 +101,13 @@ function addCustomerCallButton() {
         'Zum \'Im Gespräch\'-Bereich teleportieren und zurück',
         PositionType.LastPositionCall,
         async () => {
-            const customerCallArea1 = await WA.room.area.get('ccArea1');
-            const customerCallArea2 = await WA.room.area.get('ccArea2');
-            const position = await WA.player.getPosition();
+            const customerCallArea1 = await WA.room.area.get('InAMeetingArea');
 
             // Berechne die Mittelpunkte der Areas
-            const midPointArea1 = {
-                x: customerCallArea1.x + customerCallArea1.width / 2,
-                y: customerCallArea1.y + customerCallArea1.height / 2
-            };
-            const midPointArea2 = {
-                x: customerCallArea2.x + customerCallArea2.width / 2,
-                y: customerCallArea2.y + customerCallArea2.height / 2
-            };
-
-            // Berechne die Distanzen zur aktuellen Position
-            const distanceToArea1 =
-                getDistance(position.x, position.y, midPointArea1.x, midPointArea1.y);
-            const distanceToArea2 =
-                getDistance(position.x, position.y, midPointArea2.x, midPointArea2.y);
+        
 
             // Bestimme die nächstgelegene Area
-            return distanceToArea1 < distanceToArea2 ?
-                customerCallArea1 :
-                customerCallArea2;
+            return customerCallArea1;
         });
 }
 

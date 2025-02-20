@@ -3835,6 +3835,17 @@
                  "width":288,
                  "x":1184,
                  "y":736
+                }, 
+                {
+                 "height":192,
+                 "id":87,
+                 "name":"InAMeetingArea",
+                 "rotation":0,
+                 "type":"area",
+                 "visible":true,
+                 "width":320,
+                 "x":770,
+                 "y":735.982304606565
                 }],
          "offsetx":0.00808080808080774,
          "offsety":0.0176953934345254,
@@ -5071,8 +5082,8 @@
          "x":0,
          "y":0
         }],
- "nextlayerid":284,
- "nextobjectid":87,
+ "nextlayerid":286,
+ "nextobjectid":90,
  "orientation":"orthogonal",
  "properties":[
         {
