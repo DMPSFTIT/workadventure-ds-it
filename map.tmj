@@ -3796,11 +3796,6 @@
                          "value":"doorEntryBack"
                         }, 
                         {
-                         "name":"playAudio",
-                         "type":"string",
-                         "value":".\/sounds\/ent_door01.mp3 "
-                        }, 
-                        {
                          "name":"zone",
                          "type":"string",
                          "value":"zoneEntryBack"
@@ -3836,11 +3831,6 @@
                          "name":"doorVariable",
                          "type":"string",
                          "value":"doorEntryConference"
-                        }, 
-                        {
-                         "name":"playAudio",
-                         "type":"string",
-                         "value":".\/sounds\/ent_door01.mp3 "
                         }, 
                         {
                          "name":"zone",
@@ -3880,11 +3870,6 @@
                          "value":"doorEntryFocusRoom"
                         }, 
                         {
-                         "name":"playAudio",
-                         "type":"string",
-                         "value":".\/sounds\/ent_door01.mp3 "
-                        }, 
-                        {
                          "name":"zone",
                          "type":"string",
                          "value":"zoneEntryFocusRoom"
@@ -3920,11 +3905,6 @@
                          "name":"doorVariable",
                          "type":"string",
                          "value":"doorEntryLeft"
-                        }, 
-                        {
-                         "name":"playAudio",
-                         "type":"string",
-                         "value":".\/sounds\/ent_door01.mp3 "
                         }, 
                         {
                          "name":"zone",
@@ -3964,11 +3944,6 @@
                          "value":"doorEntryRight"
                         }, 
                         {
-                         "name":"playAudio",
-                         "type":"string",
-                         "value":".\/sounds\/ent_door01.mp3"
-                        }, 
-                        {
                          "name":"zone",
                          "type":"string",
                          "value":"zoneEntryRight"
@@ -4004,11 +3979,6 @@
                          "name":"doorVariable",
                          "type":"string",
                          "value":"doorShip"
-                        }, 
-                        {
-                         "name":"playAudio",
-                         "type":"string",
-                         "value":".\/sounds\/ent_door01.mp3"
                         }, 
                         {
                          "name":"zone",
